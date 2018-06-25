@@ -46,7 +46,6 @@ public class LabelCombinationExtended extends LabelCombination {
 		this.labels = new double[this.numLabels];
 		this.inference = inference;
 		this.instance = (Instance) instance.copy();
-		this.inference = copy.inference;
 	}
 
 	public void copy(LabelCombinationExtended copy) {
@@ -54,6 +53,7 @@ public class LabelCombinationExtended extends LabelCombination {
 		this.numLabels = copy.numLabels;
 		this.state = copy.state;
 		this.instance = (Instance) copy.getInstance().copy();
+		this.inference = copy.inference;
 	}
 
 	public void setNextLabel(int prediction, double p) {
